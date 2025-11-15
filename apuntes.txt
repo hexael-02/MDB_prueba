@@ -1,0 +1,21 @@
+//requiere se utiliza para exportar librerias, se debe declarar una constante de acuerdo a la herramienta que quieres importar de esta libreria
+
+const http = requiere('node:http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+   res.statusCode = 200;
+   res.setHeader('Content-Type', 'text/plain');
+   res.end('klk, quiere una papita\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(Server running at http://${hostname}:${port}/`);
+});
+
+
+
+
+8bc60b29ddc58dc37deac755c3ad0353
